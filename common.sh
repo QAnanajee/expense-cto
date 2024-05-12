@@ -31,7 +31,7 @@ VALIDATE() {
     fi
 }
 
-check_roo() {
+check_root() {
 
 if [ $USERID -ne 0 ]
 then
