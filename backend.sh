@@ -56,7 +56,8 @@ systemctl enable backend &>>LOGFILE
 dnf install mysql -y &>>LOGFILE
 #VALIDATE $? "Installing MYSQL CLIENT"
 
-mysql -h db.bhuvankarri.online -u root -p${mysql_root_password} < /app/schema/backend.sql &>>LOGFILE
+#mysql -h db.bhuvankarri.online -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>LOGFILE
+mysql -h db.bhuvankarri.online -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>LOGFILE
 #VALIDATE $? "Schema loading"
 
 systemctl restart backend &>>LOGFILE
